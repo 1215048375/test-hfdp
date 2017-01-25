@@ -1,3 +1,5 @@
+package TemplatePattern;
+
 /**
  * Created by Administrator on 2017/1/24.
  */
@@ -10,11 +12,9 @@ public abstract class CoffeineBeverage {
     }
 
     public void boilWater() {
-
     }
 
     public void pourInCup() {
-
     }
 
     abstract void brew();
