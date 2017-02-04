@@ -1,12 +1,15 @@
 package IteratorPattern;
 
+import java.util.Iterator;
+
 /**
  * Created by Administrator on 2017/1/25.
  */
-public class DinerMenu {
+public class DinerMenu{
     static final int MAX_ITEMS = 6;
     int numberOfItems = 0;
     MenuItem[] menuItems;
+
 
     public DinerMenu() {
         menuItems = new MenuItem[MAX_ITEMS];
@@ -26,9 +29,10 @@ public class DinerMenu {
         }
     }
 
-    public MenuItem[] getMenuItems() {
-        return menuItems;
+    public Iterator createIterator() {
+        return new DinerMenuIterator(menuItems);
     }
+
 
     //其他依赖menuItem不愿意修改的方法
 }

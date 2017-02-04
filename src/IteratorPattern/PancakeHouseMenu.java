@@ -1,6 +1,7 @@
 package IteratorPattern;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Created by Administrator on 2017/1/25.
@@ -40,6 +41,9 @@ public class PancakeHouseMenu {
         menuItems.add(menuItem);
     }
 
+    public Iterator createIterator() {
+        return menuItems.iterator();
+    }
 
     //其他依赖于arrayList不想改写的方法
 }
